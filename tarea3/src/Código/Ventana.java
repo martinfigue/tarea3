@@ -1,9 +1,9 @@
+package Código;
 import java.awt.*;
 import javax.swing.*;
-package Código;
 
 public class Ventana extends JFrame {
-    public ventana(){
+    public Ventana(){
         this.setLayout(new BorderLayout());
         this.setTitle("Expendedor");
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
