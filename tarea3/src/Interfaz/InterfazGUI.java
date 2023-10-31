@@ -1,4 +1,4 @@
-package Código;
+package Interfaz;
 
 public class InterfazGUI {
     public static void main(String[] args){

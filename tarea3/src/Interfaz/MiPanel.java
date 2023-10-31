@@ -1,4 +1,4 @@
-package Código;
+package Interfaz;
 import java.awt.Color;
 import java.awt.*;
 import javax.swing.JPanel;
