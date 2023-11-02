@@ -5,10 +5,10 @@ import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import javax.swing.JPanel;
 
-public class MiPanel extends JPanel implements MouseListener {
-    public MiPanel(){
+public class PanelExpendedor extends JPanel implements MouseListener {
+    public PanelExpendedor(){
         super();
-        this.setBackground(Color.CYAN);
+
     }
     public void paint(Graphics g){
         super.paint(g);
