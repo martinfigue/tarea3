@@ -1,12 +1,15 @@
 package Interfaz;
+import Código.Expendedor;
+
 import java.awt.Color;
 import java.awt.*;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import javax.swing.JPanel;
 
-public class PanelExpendedor extends JPanel implements MouseListener {
-    public PanelExpendedor(){
+public class PanelExpendedor extends JPanel {
+    Expendedor exp;
+    public PanelExpendedor(int x, int y){
         super();
 
     }
