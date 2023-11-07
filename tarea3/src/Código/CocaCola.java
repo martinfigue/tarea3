@@ -1,6 +1,6 @@
 package Código;
 
-class CocaCola extends Bebida{
+public class CocaCola extends Bebida{
     public CocaCola(int numSerie){
         super(numSerie);
     }

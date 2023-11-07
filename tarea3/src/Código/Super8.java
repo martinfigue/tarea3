@@ -1,6 +1,6 @@
 package Código;
 
-class Super8 extends Dulce {
+public class Super8 extends Dulce {
     public Super8(int numSerie){
         super(numSerie);
     }
