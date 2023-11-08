@@ -6,12 +6,16 @@ import java.awt.*;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import javax.swing.JPanel;
+import Código.Expendedor;
 
 public class PanelExpendedor extends JPanel {
     Expendedor exp;
     public PanelExpendedor(int x, int y){
         super();
-
+        Depositos d = new Depositos();
+        this.add(d);
+        this.setBackground(Color.red);
+        this.setPreferredSize(new Dimension(30,70));
     }
     public void paint(Graphics g){
         super.paint(g);

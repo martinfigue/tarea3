@@ -19,6 +19,7 @@ public class PanelComprador extends JPanel {
             }
         });
         this.setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
+        this.setBackground(Color.green);
         this.add(m);
         this.add(comprar);
 

@@ -33,4 +33,7 @@ public class Deposito<T>{
             return elemento;
         }
     }
+    public int getSize(){
+        return content.size();
+    }
 }
