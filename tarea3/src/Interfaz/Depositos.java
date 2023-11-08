@@ -67,14 +67,18 @@ public class Depositos extends JPanel {
         Image sprite;
         Image fanta;
         Image snickers;
+        Image super8;
         JLabel coca,coca2,coca3,coca4;
         JLabel sprite1,sprite2,sprite3,sprite4;
         JLabel fanta1,fanta2,fanta3,fanta4;
         JLabel snickers1,snickers2,snickers3,snickers4;
+        JLabel super81,super82,super83,super84;
+
         cocacola=(new ImageIcon("coca.jpeg").getImage().getScaledInstance(this.getWidth()/4,this.getHeight()/5,Image.SCALE_DEFAULT));
         sprite=(new ImageIcon("sprite.jpg").getImage().getScaledInstance(this.getWidth()/4,this.getHeight()/5,Image.SCALE_DEFAULT));
         fanta=(new ImageIcon("fanta.jpeg").getImage().getScaledInstance(this.getWidth()/4,this.getHeight()/5,Image.SCALE_DEFAULT));
         snickers=(new ImageIcon("snickers.jpeg").getImage().getScaledInstance(this.getWidth()/4,this.getHeight()/5,Image.SCALE_DEFAULT));
+        super8=(new ImageIcon("super 8.png").getImage().getScaledInstance(this.getWidth()/4,this.getHeight()/5,Image.SCALE_DEFAULT));
         for(int i=0; i<dCoca.getSize(); i++){
             if(i==0) {
                 coca = new JLabel(new ImageIcon(cocacola));
@@ -104,7 +108,6 @@ public class Depositos extends JPanel {
                 springLayout.putConstraint(SpringLayout.WEST,coca4,this.getWidth()*i/4,SpringLayout.WEST,this);
                 springLayout.putConstraint(SpringLayout.NORTH,coca4,0,SpringLayout.NORTH,this);
             }
-
         }
         for(int i = 0; i < dSprite.getSize(); i++){
             if(i==0){
@@ -194,6 +197,36 @@ public class Depositos extends JPanel {
                 this.add(snickers4);
                 springLayout.putConstraint(SpringLayout.WEST,snickers4,this.getWidth()*i/4,SpringLayout.WEST,this);
                 springLayout.putConstraint(SpringLayout.NORTH,snickers4,this.getHeight()*3/5,SpringLayout.NORTH,this);
+            }
+        }
+        for(int i = 0; i < dSuper8.getSize(); i++){
+            if(i==0){
+                super81 = new JLabel(new ImageIcon(super8));
+                super81.setPreferredSize(new Dimension(this.getWidth()/4,this.getHeight()/5));
+                this.add(super81);
+                springLayout.putConstraint(SpringLayout.WEST,super81,this.getWidth()*i/4,SpringLayout.WEST,this);
+                springLayout.putConstraint(SpringLayout.NORTH,super81,this.getHeight()*4/5,SpringLayout.NORTH,this);
+            }
+            if(i==1){
+                super82 = new JLabel(new ImageIcon(super8));
+                super82.setPreferredSize(new Dimension(this.getWidth()/4,this.getHeight()/5));
+                this.add(super82);
+                springLayout.putConstraint(SpringLayout.WEST,super82,this.getWidth()*i/4,SpringLayout.WEST,this);
+                springLayout.putConstraint(SpringLayout.NORTH,super82,this.getHeight()*4/5,SpringLayout.NORTH,this);
+            }
+            if(i==2){
+                super83 = new JLabel(new ImageIcon(super8));
+                super83.setPreferredSize(new Dimension(this.getWidth()/4,this.getHeight()/5));
+                this.add(super83);
+                springLayout.putConstraint(SpringLayout.WEST,super83,this.getWidth()*i/4,SpringLayout.WEST,this);
+                springLayout.putConstraint(SpringLayout.NORTH,super83,this.getHeight()*4/5,SpringLayout.NORTH,this);
+            }
+            if(i==3){
+                super84 = new JLabel(new ImageIcon(super8));
+                super84.setPreferredSize(new Dimension(this.getWidth()/4,this.getHeight()/5));
+                this.add(super84);
+                springLayout.putConstraint(SpringLayout.WEST,super84,this.getWidth()*i/4,SpringLayout.WEST,this);
+                springLayout.putConstraint(SpringLayout.NORTH,super84,this.getHeight()*4/5,SpringLayout.NORTH,this);
             }
         }
     }
