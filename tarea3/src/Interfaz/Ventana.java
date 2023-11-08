@@ -17,13 +17,15 @@ public class Ventana extends JFrame {
 
         pder.setBounds(500,100,300,230);
         pder.setLayout(new GridLayout(2,2));
-        pizq.setBounds(100,100,300,230);
-        pizq.setLayout(new GridLayout(1,1));
+        //pizq.setBounds(100,100,300,230);
+        //pizq.setLayout(new GridLayout(1,1));
 
 
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
         this.setSize(850,550);
         this.setVisible(true);
+        pizq.setSizePanel();
+
 
 
     }
