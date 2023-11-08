@@ -29,37 +29,7 @@ public class Depositos extends JPanel {
         }
         springLayout = new SpringLayout();
         this.setLayout(springLayout);
-
-        /*for(int i=0; i<dCoca.getSize(); i++){
-            if(i==0) {
-                coca = new JLabel((new ImageIcon("coca.jpeg")));
-                this.add(coca);
-                springLayout.putConstraint(SpringLayout.WEST,coca,this.getWidth()*i/4,SpringLayout.WEST,this);
-                springLayout.putConstraint(SpringLayout.NORTH,coca,0,SpringLayout.NORTH,this);
-            }
-            if(i==1){
-                coca2 = new JLabel((new ImageIcon("coca.jpeg")));
-                this.add(coca2);
-                springLayout.putConstraint(SpringLayout.WEST,coca2,25,SpringLayout.WEST,this);
-                springLayout.putConstraint(SpringLayout.NORTH,coca2,this.getWidth()*i/4,SpringLayout.NORTH,this);
-            }
-
-        }*/
-        /*for(int i=0; i<dFanta.getSize(); i++){
-            this.add(add(new JLabel((new ImageIcon("fanta.jpeg")))));
-        }
-        for(int i=0; i<dSprite.getSize(); i++){
-            this.add(add(new JLabel((new ImageIcon("sprite.jpg")))));
-        }
-        for(int i=0; i<dSnickers.getSize(); i++){
-            this.add(add(new JLabel((new ImageIcon("snickers.jpeg")))));
-        }
-        for(int i=0; i<dSuper8.getSize(); i++){
-            this.add(add(new JLabel((new ImageIcon("super 8.png")))));
-        }*/
         this.setBackground(Color.BLUE);
-
-
     }
 
     public void fill(){
@@ -230,6 +200,5 @@ public class Depositos extends JPanel {
             }
         }
     }
-
 
 }
