@@ -5,7 +5,7 @@ import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 
 public class PanelProducto extends JPanel {
-
+    int estaLleno = 0;
     public PanelProducto(){
         this.setBackground(Color.green);
         this.setPreferredSize(new Dimension(200,300));
@@ -36,8 +36,11 @@ public class PanelProducto extends JPanel {
     }
 
     public void sacarProducto(){
-        this.removeAll();
-        this.repaint();
-        this.revalidate();
+        if(estaLleno == 1) {
+            this.removeAll();
+            this.repaint();
+            this.revalidate();
+            estaLleno = 0;
+        }
     }
 }

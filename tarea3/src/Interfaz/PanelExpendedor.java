@@ -16,6 +16,7 @@ public class PanelExpendedor extends JPanel {
     PanelProducto pp;
     public PanelExpendedor(int x, int y){
         super();
+        this.setPreferredSize(new Dimension((int) (this.getWidth()*0.8), (int) (0.8*this.getHeight())));
         SpringLayout springLayout = new SpringLayout();
         this.setPreferredSize(new Dimension(425,550));
         d = new Depositos(this.getPreferredSize());
@@ -47,20 +48,23 @@ public class PanelExpendedor extends JPanel {
 
     public void comprarProducto(String producto){
         pp.removeAll();
-        if(producto=="fanta"){
-            pp.add(new JLabel((new ImageIcon("fanta.jpeg"))));
-        }
-        else if (producto=="sprite") {
-            pp.add(new JLabel((new ImageIcon("sprite.jpg"))));
-        }
-        else if (producto=="cocacola"){
-            pp.add(new JLabel((new ImageIcon("coca.jpeg"))));
-        }
-        else if (producto=="snickers") {
-            pp.add(new JLabel((new ImageIcon("snickers.jpeg"))));
-        }
-        else if (producto=="super8"){
-            pp.add(new JLabel((new ImageIcon("super 8.png"))));
+        if(pp.estaLleno == 0) {
+            if (producto == "fanta") {
+                pp.add(new JLabel((new ImageIcon("fanta.jpeg"))));
+                pp.estaLleno = 1;
+            } else if (producto == "sprite") {
+                pp.add(new JLabel((new ImageIcon("sprite.jpg"))));
+                pp.estaLleno = 1;
+            } else if (producto == "cocacola") {
+                pp.add(new JLabel((new ImageIcon("coca.jpeg"))));
+                pp.estaLleno = 1;
+            } else if (producto == "snickers") {
+                pp.add(new JLabel((new ImageIcon("snickers.jpeg"))));
+                pp.estaLleno = 1;
+            } else if (producto == "super8") {
+                pp.add(new JLabel((new ImageIcon("super 8.png"))));
+                pp.estaLleno = 1;
+            }
         }
     }
 

@@ -11,7 +11,7 @@ public class Ventana extends JFrame {
         this.setLayout(new GridLayout(1, 2));
         PanelExpendedor pizq = new PanelExpendedor(50, 100);
         PanelComprador pder = new PanelComprador(pizq);
-
+        //pizq.setSizePanel();
         this.add(pizq);
         this.add(pder);
 
@@ -23,9 +23,9 @@ public class Ventana extends JFrame {
 
 
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
+        //pizq.setSizePanel();
         this.setVisible(true);
         pizq.setSizePanel();
-
 
 
     }
