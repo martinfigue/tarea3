@@ -17,7 +17,7 @@ public class Ventana extends JFrame {
 
 
         pder.setBounds(500,100,300,230);
-        pder.setLayout(new GridLayout(2,2));
+
         //pizq.setBounds(100,100,300,230);
         //pizq.setLayout(new GridLayout(1,1));
 

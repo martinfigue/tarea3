@@ -12,7 +12,7 @@ public class PanelMonedas extends JPanel {
     private JRadioButton moneda1000;
     private JRadioButton moneda1500;
 
-    ButtonGroup grupo;
+    ButtonGroup group;
 
     public PanelMonedas() {
 
@@ -21,20 +21,24 @@ public class PanelMonedas extends JPanel {
         ImageIcon icon3 = createImageIcon("tarea3/billete1000.jpg");
         ImageIcon icon4 = createImageIcon("tarea3/Moneda1500.jpg");
 
+        group = new ButtonGroup();
+
         moneda100 = new JRadioButton("", icon1);
         moneda500 = new JRadioButton("", icon2);
         moneda1000 = new JRadioButton("", icon3);
         moneda1500 = new JRadioButton("", icon4);
+
         this.setLayout(new GridLayout(2, 2));
+
+        group.add(moneda100);
+        group.add(moneda500);
+        group.add(moneda1000);
+        group.add(moneda1500);
+
         this.add(moneda100);
         this.add(moneda500);
         this.add(moneda1000);
         this.add(moneda1500);
-        grupo = new ButtonGroup();
-        grupo.add(moneda100);
-        grupo.add(moneda500);
-        grupo.add(moneda1000);
-        grupo.add(moneda1500);
     }
 
     public Moneda getSerie() {
@@ -47,7 +51,7 @@ public class PanelMonedas extends JPanel {
             if (imgFile.exists()) {
                 ImageIcon imageIcon = new ImageIcon(path);
                 Image image = imageIcon.getImage();
-                Image scaledImage = image.getScaledInstance(70, 70, Image.SCALE_SMOOTH);
+                Image scaledImage = image.getScaledInstance(100, 100, Image.SCALE_SMOOTH);
                 return new ImageIcon(scaledImage);
             }
         } catch (Exception ex) {

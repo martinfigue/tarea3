@@ -11,7 +11,7 @@ public class PanelElegirProducto extends JPanel {
     private JRadioButton snickers;
     private JRadioButton super8;
 
-    ButtonGroup items;
+    ButtonGroup grupo;
 
     public PanelElegirProducto(){
         ImageIcon icon1 = createImageIcon("tarea3/coca.jpeg");
@@ -20,23 +20,28 @@ public class PanelElegirProducto extends JPanel {
         ImageIcon icon4 = createImageIcon("tarea3/snickers.jpeg");
         ImageIcon icon5 = createImageIcon("tarea3/super 8.png");
 
+        grupo = new ButtonGroup();
+
         cocacola = new JRadioButton("", icon1);
         sprite = new JRadioButton("", icon2);
         fanta = new JRadioButton("", icon3);
         snickers = new JRadioButton("", icon4);
         super8 = new JRadioButton("",icon5);
+
         this.setLayout(new GridLayout(3, 3));
+
+        grupo.add(cocacola);
+        grupo.add(sprite);
+        grupo.add(fanta);
+        grupo.add(snickers);
+        grupo.add(super8);
+
         this.add(cocacola);
         this.add(sprite);
         this.add(fanta);
         this.add(snickers);
         this.add(super8);
-        items = new ButtonGroup();
-        items.add(cocacola);
-        items.add(sprite);
-        items.add(fanta);
-        items.add(snickers);
-        items.add(super8);
+
     }
     protected static ImageIcon createImageIcon(String path) {
         try {
@@ -44,7 +49,7 @@ public class PanelElegirProducto extends JPanel {
             if (imgFile.exists()) {
                 ImageIcon imageIcon = new ImageIcon(path);
                 Image image = imageIcon.getImage();
-                Image scaledImage = image.getScaledInstance(100, 100, Image.SCALE_SMOOTH);
+                Image scaledImage = image.getScaledInstance(150, 150, Image.SCALE_SMOOTH);
                 return new ImageIcon(scaledImage);
             }
         } catch (Exception ex) {
