@@ -33,6 +33,7 @@ public class Depositos extends JPanel {
     }
 
     public void fill(){
+        this.removeAll();
         Image cocacola;
         Image sprite;
         Image fanta;
@@ -200,5 +201,14 @@ public class Depositos extends JPanel {
             }
         }
     }
-
+    public void refill(){
+        int x = 0;
+        while(dCoca.getSize() < 4){
+            dCoca.addElemento(new CocaCola(1000+x));
+            x++;
+        }
+    }
+    public void getCocacola() {
+        dCoca.getElemento();
+    }
 }

@@ -8,8 +8,11 @@ import java.awt.event.MouseListener;
 
 public class PanelComprador extends JPanel {
     PanelMonedas m;
-    public PanelComprador() {
+    Depositos d;
+    PanelExpendedor pe;
+    public PanelComprador(PanelExpendedor panexp) {
         m = new PanelMonedas();
+        pe = panexp;
         JButton comprar = new JButton("comprar");
 
         comprar.addActionListener(new ActionListener() {
@@ -22,7 +25,16 @@ public class PanelComprador extends JPanel {
         this.setBackground(Color.green);
         this.add(m);
         this.add(comprar);
-
+        comprar.addActionListener(new ComprarListener());
         setVisible(true);
+    }
+    private class ComprarListener implements ActionListener{
+        public void actionPerformed(ActionEvent ae) {
+            pe.d.getCocacola();
+            pe.comprarProducto("cocacola");
+            pe.d.fill();
+            pe.d.revalidate();
+            pe.repaint();
+        }
     }
 }
