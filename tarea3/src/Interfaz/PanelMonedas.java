@@ -23,10 +23,10 @@ public class PanelMonedas extends JPanel {
 
         group = new ButtonGroup();
 
-        moneda100 = new JRadioButton("", icon1);
-        moneda500 = new JRadioButton("", icon2);
-        moneda1000 = new JRadioButton("", icon3);
-        moneda1500 = new JRadioButton("", icon4);
+        moneda100 = new JRadioButton("100", icon1);
+        moneda500 = new JRadioButton("500", icon2);
+        moneda1000 = new JRadioButton("1000", icon3);
+        moneda1500 = new JRadioButton("1500", icon4);
 
         this.setLayout(new GridLayout(2, 2));
 

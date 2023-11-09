@@ -6,20 +6,30 @@ import javax.swing.*;
 import java.awt.*;
 
 public class PanelElegirProducto extends JPanel {
-    private JButton cocacola;
-    private JButton sprite;
-    private JButton fanta;
-    private JButton snickers;
-    private JButton super8;
+    private JToggleButton cocacola;
+    private JToggleButton sprite;
+    private JToggleButton fanta;
+    private JToggleButton snickers;
+    private JToggleButton super8;
+    private ButtonGroup grupo;
 
     public PanelElegirProducto(){
-        cocacola = new JButton(new ImageIcon("coca.jpeg"));
-        sprite = new JButton(new ImageIcon("sprite.jpg"));
-        fanta = new JButton(new ImageIcon("fanta.jpeg"));
-        snickers = new JButton(new ImageIcon("snickers.jpeg"));
-        super8 = new JButton(new ImageIcon("super 8.png"));
+
+        grupo = new ButtonGroup();
+
+        cocacola = new JToggleButton(new ImageIcon("coca.jpeg"));
+        sprite = new JToggleButton(new ImageIcon("sprite.jpg"));
+        fanta = new JToggleButton(new ImageIcon("fanta.jpeg"));
+        snickers = new JToggleButton(new ImageIcon("snickers.jpeg"));
+        super8 = new JToggleButton(new ImageIcon("super 8.png"));
 
         this.setLayout(new GridLayout(3,3));
+
+        grupo.add(cocacola);
+        grupo.add(sprite);
+        grupo.add(fanta);
+        grupo.add(snickers);
+        grupo.add(super8);
 
         this.add(cocacola);
         this.add(sprite);
