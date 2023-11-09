@@ -47,7 +47,7 @@ public class PanelMonedas extends JPanel {
             if (imgFile.exists()) {
                 ImageIcon imageIcon = new ImageIcon(path);
                 Image image = imageIcon.getImage();
-                Image scaledImage = image.getScaledInstance(150, 150, Image.SCALE_SMOOTH);
+                Image scaledImage = image.getScaledInstance(70, 70, Image.SCALE_SMOOTH);
                 return new ImageIcon(scaledImage);
             }
         } catch (Exception ex) {
