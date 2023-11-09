@@ -7,6 +7,7 @@ public class Ventana extends JFrame {
     
     Ventana() {
         super("Maquina Expendedora");
+        this.setSize(1000,750);
         this.setLayout(new GridLayout(1, 2));
         PanelExpendedor pizq = new PanelExpendedor(50, 100);
         PanelComprador pder = new PanelComprador(pizq);
@@ -22,7 +23,6 @@ public class Ventana extends JFrame {
 
 
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
-        this.setSize(850,550);
         this.setVisible(true);
         pizq.setSizePanel();
 
