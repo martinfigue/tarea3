@@ -1,4 +1,5 @@
 package Interfaz;
+import Código.Deposito;
 import Código.Expendedor;
 
 import java.awt.Color;
@@ -33,6 +34,9 @@ public class PanelExpendedor extends JPanel {
         System.out.println(this.getWidth());
         System.out.println(this.getHeight());
     }
+
+
+
     public void paint(Graphics g){
         super.paint(g);
     }
@@ -51,8 +55,10 @@ public class PanelExpendedor extends JPanel {
 
     }*/
 
+
     private class Listenerclick implements MouseListener {
         public void mouseClicked(MouseEvent e){
+            d.refill();
             d.fill();
             d.revalidate();
             System.out.println("hola");

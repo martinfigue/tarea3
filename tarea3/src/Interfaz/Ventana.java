@@ -8,8 +8,8 @@ public class Ventana extends JFrame {
     Ventana() {
         super("Maquina Expendedora");
         this.setLayout(new GridLayout(1, 2));
-        PanelComprador pder = new PanelComprador();
         PanelExpendedor pizq = new PanelExpendedor(50, 100);
+        PanelComprador pder = new PanelComprador(pizq);
 
         this.add(pizq);
         this.add(pder);
