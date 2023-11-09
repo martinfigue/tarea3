@@ -14,18 +14,18 @@ public class PanelMonedas extends JPanel {
 
     ButtonGroup grupo;
 
-    public PanelMonedas(){
+    public PanelMonedas() {
 
         ImageIcon icon1 = createImageIcon("tarea3/moneda100.jpg");
         ImageIcon icon2 = createImageIcon("tarea3/moneda500.jpg");
         ImageIcon icon3 = createImageIcon("tarea3/billete1000.jpg");
-        ImageIcon icon4 = createImageIcon("tarea3/moneda1500.jpg");
+        ImageIcon icon4 = createImageIcon("tarea3/Moneda1500.jpg");
 
-        moneda100 = new JRadioButton("",icon1);
-        moneda500 = new JRadioButton("",icon2);
-        moneda1000 = new JRadioButton("",icon3);
-        moneda1500 = new JRadioButton("",icon4);
-        this.setLayout(new GridLayout(2,2));
+        moneda100 = new JRadioButton("", icon1);
+        moneda500 = new JRadioButton("", icon2);
+        moneda1000 = new JRadioButton("", icon3);
+        moneda1500 = new JRadioButton("", icon4);
+        this.setLayout(new GridLayout(2, 2));
         this.add(moneda100);
         this.add(moneda500);
         this.add(moneda1000);
@@ -36,14 +36,19 @@ public class PanelMonedas extends JPanel {
         grupo.add(moneda1000);
         grupo.add(moneda1500);
     }
-    public Moneda getSerie(){
+
+    public Moneda getSerie() {
         return this.getSerie();
     }
+
     protected static ImageIcon createImageIcon(String path) {
         try {
             File imgFile = new File(path);
             if (imgFile.exists()) {
-                return new ImageIcon(path);
+                ImageIcon imageIcon = new ImageIcon(path);
+                Image image = imageIcon.getImage();
+                Image scaledImage = image.getScaledInstance(150, 150, Image.SCALE_SMOOTH);
+                return new ImageIcon(scaledImage);
             }
         } catch (Exception ex) {
             ex.printStackTrace();
@@ -51,4 +56,14 @@ public class PanelMonedas extends JPanel {
         return null;
     }
 
+    private static JRadioButton createRadioButton(String imagePath, String text) {
+        JRadioButton radioButton = new JRadioButton(text);
+        ImageIcon icon = createImageIcon(imagePath);
+        if (icon != null) {
+            JLabel imageLabel = new JLabel(icon);
+            radioButton.setLayout(new FlowLayout());
+            radioButton.add(imageLabel);
+        }
+        return radioButton;
+    }
 }
