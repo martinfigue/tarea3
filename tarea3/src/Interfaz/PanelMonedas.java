@@ -1,6 +1,6 @@
 package Interfaz;
 
-import Código.Moneda;
+import Código.*;
 
 import javax.swing.*;
 import java.awt.*;
@@ -69,5 +69,20 @@ public class PanelMonedas extends JPanel {
             radioButton.add(imageLabel);
         }
         return radioButton;
+    }
+    public Moneda monedaSeleccionada(){
+        if(moneda100.isSelected()){
+            return getSerie();
+        }
+        else if(moneda500.isSelected()){
+            return getSerie();
+        }
+        else if(moneda1000.isSelected()){
+            return getSerie();
+        }
+        else if(moneda1500.isSelected()){
+            return getSerie();
+        }
+        return null;
     }
 }
