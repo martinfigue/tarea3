@@ -11,7 +11,6 @@ public class Depositos extends JPanel {
     private Deposito<Fanta> dFanta;
     private Deposito<Snickers> dSnickers;
     private Deposito<Super8> dSuper8;
-
     private  SpringLayout springLayout;
     public Depositos(Dimension size){
         dCoca = new Deposito<CocaCola>();
@@ -207,8 +206,7 @@ public class Depositos extends JPanel {
             dCoca.addElemento(new CocaCola(1000+x));
             x++;
         }
-    }
-    public void getCocacola() {
+    } public void getCocacola() {
         dCoca.getElemento();
     }
 }
