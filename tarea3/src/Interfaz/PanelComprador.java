@@ -13,8 +13,9 @@ public class PanelComprador extends JPanel {
     PanelExpendedor pe;
     public PanelComprador(PanelExpendedor panexp) {
         m = new PanelMonedas();
-        p = new PanelElegirProducto();
         pe = panexp;
+        p = new PanelElegirProducto(pe);
+
         JButton comprar = new JButton("comprar");
 
         comprar.addActionListener(new ActionListener() {

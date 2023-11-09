@@ -66,6 +66,7 @@ public class PanelExpendedor extends JPanel {
                 pp.estaLleno = 1;
             }
         }
+        pp.revalidate();
     }
 
 
