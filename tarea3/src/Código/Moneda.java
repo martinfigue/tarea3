@@ -6,7 +6,7 @@ package Código;
  * @author martinfigueroa
  */
 
-abstract class Moneda implements Comparable<Moneda>{
+public abstract class Moneda implements Comparable<Moneda>{
     public Moneda(){
 
     }
