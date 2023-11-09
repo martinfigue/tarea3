@@ -63,7 +63,7 @@ public class PanelExpendedor extends JPanel {
             pp.add(new JLabel((new ImageIcon("super 8.png"))));
         }
     }
-    
+
 
 
     public void paint(Graphics g){
