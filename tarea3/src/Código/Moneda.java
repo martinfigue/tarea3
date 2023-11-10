@@ -7,15 +7,16 @@ package Código;
  */
 
 public abstract class Moneda implements Comparable<Moneda>{
-    public Moneda(){
-
+    private int serie;
+    public Moneda(int serie){
+        this.serie=serie;
     }
 
     /** Retorna la dirección a la moneda y la usaremos como número de serie
      * @return número de serie
      */
-    public Moneda getSerie(){
-        return this;
+    public int getSerie(){
+        return serie;
     }
 
     @Override

@@ -44,17 +44,32 @@ public class PanelComprador extends JPanel {
                 }
             }
             else if(tipo=="sprite"){
-                pe.comprarProducto("sprite");
-
+                if(valor>=Precios.PRECIOSPRITE.getPrecio()) {
+                    pe.comprarProducto("sprite");
+                }else{
+                    throw new PagoInsuficienteException("No insertó suficiente dinero");
+                }
             }
             else if(tipo=="fanta"){
-                pe.comprarProducto("fanta");
+                if(valor>=Precios.PRECIOFANTA.getPrecio()) {
+                    pe.comprarProducto("fanta");
+                }else{
+                    throw new PagoInsuficienteException("No insertó suficiente dinero");
+                }
             }
             else if(tipo=="snickers"){
-                pe.comprarProducto("snickers");
+                if(valor>=Precios.PRECIOSNICKERS.getPrecio()) {
+                    pe.comprarProducto("snickers");
+                }else{
+                    throw new PagoInsuficienteException("No insertó suficiente dinero");
+                }
             }
             else if(tipo=="super8"){
-                pe.comprarProducto("super8");
+                if(valor>=Precios.PRECIOSUPER8.getPrecio()) {
+                    pe.comprarProducto("super8");
+                }else{
+                    throw new PagoInsuficienteException("No insertó suficiente dinero");
+                }
             }
         }
     }
@@ -63,6 +78,9 @@ public class PanelComprador extends JPanel {
         public void actionPerformed(ActionEvent ae){
             String tipoproducto=p.ProductoSeleccionado();
             Moneda moneda=m.monedaSeleccionada();
+            if(moneda!=null){
+                System.out.println("Número de serie de moneda:" + " " + moneda.getSerie());
+            }
             try{
                 comprarProducto(tipoproducto,moneda);
             }catch (PagoInsuficienteException ex){

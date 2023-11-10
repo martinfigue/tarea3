@@ -75,7 +75,7 @@ public class Expendedor {
             }
             if (c != null) {
                 for (int i = 0; i < (x - precio) / 100; i++) {
-                    Moneda m100 = new Moneda100();
+                    Moneda m100 = new Moneda100(0);
                     monVu.addElemento(m100);
                 }
                 return c;
@@ -89,7 +89,7 @@ public class Expendedor {
             }
             if (s != null) {
                 for (int i = 0; i < (x - precio) / 100; i++) {
-                    Moneda m100 = new Moneda100();
+                    Moneda m100 = new Moneda100(0);
                     monVu.addElemento(m100);
                 }
                 return s;
@@ -103,7 +103,7 @@ public class Expendedor {
             }
             if (f != null) {
                 for (int i = 0; i < (x - precio) / 100; i++) {
-                    Moneda m100 = new Moneda100();
+                    Moneda m100 = new Moneda100(0);
                     monVu.addElemento(m100);
                 }
                 return f;
@@ -117,7 +117,7 @@ public class Expendedor {
             }
             if (k != null) {
                 for (int i = 0; i < (x - precio) / 100; i++) {
-                    Moneda m100 = new Moneda100();
+                    Moneda m100 = new Moneda100(0);
                     monVu.addElemento(m100);
                 }
                 return k;
@@ -131,7 +131,7 @@ public class Expendedor {
             }
             if (p != null) {
                 for (int i = 0; i < (x - precio) / 100; i++) {
-                    Moneda m100 = new Moneda100();
+                    Moneda m100 = new Moneda100(0);
                     monVu.addElemento(m100);
                 }
                 return p;
