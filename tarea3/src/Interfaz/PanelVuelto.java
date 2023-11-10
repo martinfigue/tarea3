@@ -6,6 +6,9 @@ import Código.Moneda;
 import javax.swing.*;
 import java.awt.*;
 
+/**
+ * Aca se crea el deposito del vuelto y tambien se muestra en la interfaz al momento de realizar una compra correctamente
+ */
 public class PanelVuelto extends JPanel {
 
     public Deposito<Moneda> vuelto;

@@ -12,6 +12,10 @@ import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import javax.swing.*;
 
+/**
+ *
+ */
+
 public class PanelExpendedor extends JPanel {
     Expendedor exp;
     Depositos d;

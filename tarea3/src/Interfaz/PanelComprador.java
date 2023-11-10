@@ -8,6 +8,11 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseListener;
 
+/**
+ * Panel que representa al comprador dentro de la interfaz
+ * Se crean los nuevos paneles para seleccionar monedas y el producto que se desea comprar
+ *
+ */
 public class PanelComprador extends JPanel {
     PanelMonedas m;
     PanelElegirProducto p;
@@ -15,6 +20,7 @@ public class PanelComprador extends JPanel {
     PanelExpendedor pe;
 
     int count_serie=0;
+
     public PanelComprador(PanelExpendedor panexp) {
         m = new PanelMonedas();
         pe = panexp;
@@ -31,7 +37,13 @@ public class PanelComprador extends JPanel {
         setVisible(true);
     }
 
-
+    /**
+     * Aca se realiza la compra la cual devuelve el producto como tambien asi su vuelto
+     * @param tipo el producto que se quiere comprar
+     * @param m el tipo de moneda que se usara para la compra
+     * @throws PagoIncorrectoException
+     * @throws PagoInsuficienteException
+     */
     public void comprarProducto(String tipo,Moneda m) throws PagoIncorrectoException, PagoInsuficienteException {
 
         if(m==null){

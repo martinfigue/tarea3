@@ -5,6 +5,10 @@ import Código.*;
 import javax.swing.*;
 import java.awt.*;
 
+/**
+ * se crean los depositos de los productos para usarse en panel expendedor
+ */
+
 public class Depositos extends JPanel {
     private Deposito<CocaCola> dCoca;
     private Deposito<Sprite> dSprite;
@@ -20,6 +24,11 @@ public class Depositos extends JPanel {
 
 
     private  SpringLayout springLayout;
+
+    /**
+     * se crean los depositos
+     * @param size
+     */
     public Depositos(Dimension size){
         dCoca = new Deposito<CocaCola>();
         dSprite = new Deposito<Sprite>();
@@ -230,6 +239,10 @@ public class Depositos extends JPanel {
         this.revalidate();
         this.repaint();
     }
+
+    /**
+     * Aca se hace el refill de los productos del expendedor dependiendo del elemento en cuestion
+     */
     public void refill(){
         int x = 0;
         while(dCoca.getSize() < 4){
@@ -261,6 +274,11 @@ public class Depositos extends JPanel {
 
         }
     }
+
+    /**
+     *
+     * @throws NoHayProductoException
+     */
     public void getSprite() throws NoHayProductoException {
         if(dSprite.getSize()==0){
             throw new NoHayProductoException("No hay más de este producto");
