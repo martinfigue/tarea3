@@ -235,19 +235,44 @@ public class Depositos extends JPanel {
             x++;
         }
     }
-    public void getCocacola() {
-        cocacolacomprada=dCoca.getElemento();
+    public void getCocacola() throws NoHayProductoException {
+        if(dCoca.getSize()==0) {
+            throw new NoHayProductoException("No hay más de este producto");
+        }else {
+            cocacolacomprada = dCoca.getElemento();
+
+        }
     }
-    public void getSprite(){
-        spritecomprada = dSprite.getElemento();
+    public void getSprite() throws NoHayProductoException {
+        if(dSprite.getSize()==0){
+            throw new NoHayProductoException("No hay más de este producto");
+        }
+        else {
+            spritecomprada = dSprite.getElemento();
+        }
     }
-    public void getFanta(){
-        fantacomprada = dFanta.getElemento();
+    public void getFanta() throws NoHayProductoException {
+        if(dFanta.getSize()==0){
+            throw new NoHayProductoException("No hay más de este producto");
+        }
+        else {
+            fantacomprada = dFanta.getElemento();
+        }
     }
-    public void getSnickers(){
-        snickerscomprado = dSnickers.getElemento();
+    public void getSnickers() throws NoHayProductoException {
+        if(dSnickers.getSize()==0){
+            throw new NoHayProductoException("No hay más de este producto");
+        }
+        else {
+            snickerscomprado = dSnickers.getElemento();
+        }
     }
-    public void getSuper8(){
-        super8comprado = dSuper8.getElemento();
+    public void getSuper8() throws NoHayProductoException {
+        if(dSuper8.getSize()==0){
+            throw new NoHayProductoException("No hay más de este producto");
+        }
+        else {
+            super8comprado = dSuper8.getElemento();
+        }
     }
 }

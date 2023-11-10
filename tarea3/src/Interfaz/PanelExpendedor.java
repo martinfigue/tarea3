@@ -1,6 +1,7 @@
 package Interfaz;
 import Código.Deposito;
 import Código.Expendedor;
+import Código.NoHayProductoException;
 
 import java.awt.Color;
 import java.awt.*;
@@ -50,30 +51,50 @@ public class PanelExpendedor extends JPanel {
         pp.removeAll();
         if(pp.estaLleno == 0) {
             if (producto == "fanta") {
-                pp.add(new JLabel((new ImageIcon("fanta.jpeg"))));
-                d.getFanta();
+                try {
+                    d.getFanta();
+                    pp.add(new JLabel((new ImageIcon("fanta.jpeg"))));
+                    pp.estaLleno = 1;
+                }catch (NoHayProductoException ex){
+                    ex.printStackTrace();
+                }
                 d.fill();
-                pp.estaLleno = 1;
             } else if (producto == "sprite") {
-                pp.add(new JLabel((new ImageIcon("sprite.jpg"))));
-                d.getSprite();
+                try {
+                    d.getSprite();
+                    pp.add(new JLabel((new ImageIcon("sprite.jpg"))));
+                    pp.estaLleno = 1;
+                } catch(NoHayProductoException ex) {
+                    ex.printStackTrace();
+                }
                 d.fill();
-                pp.estaLleno = 1;
             } else if (producto == "cocacola") {
-                pp.add(new JLabel((new ImageIcon("coca.jpeg"))));
-                d.getCocacola();
+                try {
+                    d.getCocacola();
+                    pp.add(new JLabel((new ImageIcon("coca.jpeg"))));
+                    pp.estaLleno = 1;
+                } catch (NoHayProductoException ex){
+                        ex.printStackTrace();
+                }
                 d.fill();
-                pp.estaLleno = 1;
             } else if (producto == "snickers") {
-                pp.add(new JLabel((new ImageIcon("snickers.jpeg"))));
-                d.getSnickers();
+                try {
+                    d.getSnickers();
+                    pp.add(new JLabel((new ImageIcon("snickers.jpeg"))));
+                    pp.estaLleno = 1;
+                } catch (NoHayProductoException ex){
+                    ex.printStackTrace();
+                }
                 d.fill();
-                pp.estaLleno = 1;
             } else if (producto == "super8") {
-                pp.add(new JLabel((new ImageIcon("super 8.png"))));
-                d.getSuper8();
+                try {
+                    d.getSuper8();
+                    pp.add(new JLabel((new ImageIcon("super 8.png"))));
+                    pp.estaLleno = 1;
+                } catch (NoHayProductoException ex){
+                    ex.printStackTrace();
+                }
                 d.fill();
-                pp.estaLleno = 1;
             }
         }
         pp.revalidate();

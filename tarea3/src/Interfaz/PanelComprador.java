@@ -1,4 +1,6 @@
 package Interfaz;
+import Código.NoHayProductoException;
+
 import java.awt.*;
 import javax.swing.*;
 import java.awt.*;
@@ -35,13 +37,9 @@ public class PanelComprador extends JPanel {
     }
     private class ComprarListener implements ActionListener{
         public void actionPerformed(ActionEvent ae) {
-            if(pe.pp.estaLleno == 0) {
-                pe.d.getCocacola();
-                pe.comprarProducto("cocacola");
-                pe.d.fill();
-                pe.d.revalidate();
-                pe.repaint();
-            }
+
+
+
         }
     }
 }

@@ -1,5 +1,6 @@
 package Interfaz;
 
+import Código.NoHayProductoException;
 import Código.Producto;
 
 import javax.swing.*;
@@ -50,7 +51,9 @@ public class PanelElegirProducto extends JPanel {
     public int ProductoSeleccionado(){
         System.out.println(cocacola.isSelected());
         if(cocacola.isSelected()){
-            pe.comprarProducto("cocacola");
+
+                pe.comprarProducto("cocacola");
+
             return Producto.getSerie();
         }
         else if(sprite.isSelected()){
