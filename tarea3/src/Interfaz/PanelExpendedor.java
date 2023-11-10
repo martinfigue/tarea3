@@ -20,7 +20,7 @@ public class PanelExpendedor extends JPanel {
         SpringLayout springLayout = new SpringLayout();
         this.setPreferredSize(new Dimension(425,550));
         d = new Depositos(this.getPreferredSize());
-        pp = new PanelProducto();
+        pp = new PanelProducto(this.d);
         this.setLayout(springLayout);
         this.add(d);
         this.setBackground(Color.red);
@@ -51,18 +51,28 @@ public class PanelExpendedor extends JPanel {
         if(pp.estaLleno == 0) {
             if (producto == "fanta") {
                 pp.add(new JLabel((new ImageIcon("fanta.jpeg"))));
+                d.getFanta();
+                d.fill();
                 pp.estaLleno = 1;
             } else if (producto == "sprite") {
                 pp.add(new JLabel((new ImageIcon("sprite.jpg"))));
+                d.getSprite();
+                d.fill();
                 pp.estaLleno = 1;
             } else if (producto == "cocacola") {
                 pp.add(new JLabel((new ImageIcon("coca.jpeg"))));
+                d.getCocacola();
+                d.fill();
                 pp.estaLleno = 1;
             } else if (producto == "snickers") {
                 pp.add(new JLabel((new ImageIcon("snickers.jpeg"))));
+                d.getSnickers();
+                d.fill();
                 pp.estaLleno = 1;
             } else if (producto == "super8") {
                 pp.add(new JLabel((new ImageIcon("super 8.png"))));
+                d.getSuper8();
+                d.fill();
                 pp.estaLleno = 1;
             }
         }

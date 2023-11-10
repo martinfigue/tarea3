@@ -11,6 +11,14 @@ public class Depositos extends JPanel {
     private Deposito<Fanta> dFanta;
     private Deposito<Snickers> dSnickers;
     private Deposito<Super8> dSuper8;
+
+    public CocaCola cocacolacomprada;
+    public Sprite spritecomprada;
+    public Fanta fantacomprada;
+    public Snickers snickerscomprado;
+    public Super8 super8comprado;
+
+
     private  SpringLayout springLayout;
     public Depositos(Dimension size){
         dCoca = new Deposito<CocaCola>();
@@ -43,6 +51,8 @@ public class Depositos extends JPanel {
         JLabel fanta1,fanta2,fanta3,fanta4;
         JLabel snickers1,snickers2,snickers3,snickers4;
         JLabel super81,super82,super83,super84;
+
+
 
         cocacola=(new ImageIcon("coca.jpeg").getImage().getScaledInstance(this.getWidth()/4,this.getHeight()/5,Image.SCALE_DEFAULT));
         sprite=(new ImageIcon("sprite.jpg").getImage().getScaledInstance(this.getWidth()/4,this.getHeight()/5,Image.SCALE_DEFAULT));
@@ -199,6 +209,8 @@ public class Depositos extends JPanel {
                 springLayout.putConstraint(SpringLayout.NORTH,super84,this.getHeight()*4/5,SpringLayout.NORTH,this);
             }
         }
+        this.revalidate();
+        this.repaint();
     }
     public void refill(){
         int x = 0;
@@ -206,7 +218,36 @@ public class Depositos extends JPanel {
             dCoca.addElemento(new CocaCola(1000+x));
             x++;
         }
-    } public void getCocacola() {
-        dCoca.getElemento();
+        while(dSprite.getSize() < 4){
+            dSprite.addElemento(new Sprite(1000+x));
+            x++;
+        }
+        while(dFanta.getSize() < 4){
+            dFanta.addElemento(new Fanta(1000+x));
+            x++;
+        }
+        while(dSnickers.getSize() < 4){
+            dSnickers.addElemento(new Snickers(1000+x));
+            x++;
+        }
+        while(dSuper8.getSize() < 4){
+            dSuper8.addElemento(new Super8(1000+x));
+            x++;
+        }
+    }
+    public void getCocacola() {
+        cocacolacomprada=dCoca.getElemento();
+    }
+    public void getSprite(){
+        spritecomprada = dSprite.getElemento();
+    }
+    public void getFanta(){
+        fantacomprada = dFanta.getElemento();
+    }
+    public void getSnickers(){
+        snickerscomprado = dSnickers.getElemento();
+    }
+    public void getSuper8(){
+        super8comprado = dSuper8.getElemento();
     }
 }
