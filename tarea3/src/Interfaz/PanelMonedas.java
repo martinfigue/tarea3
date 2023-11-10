@@ -16,10 +16,10 @@ public class PanelMonedas extends JPanel {
 
     public PanelMonedas() {
 
-        ImageIcon icon1 = createImageIcon("tarea3/moneda100.jpg");
-        ImageIcon icon2 = createImageIcon("tarea3/moneda500.jpg");
-        ImageIcon icon3 = createImageIcon("tarea3/billete1000.jpg");
-        ImageIcon icon4 = createImageIcon("tarea3/Moneda1500.jpg");
+        ImageIcon icon1 = new ImageIcon(new ImageIcon("moneda100.jpg").getImage().getScaledInstance(200,200,Image.SCALE_DEFAULT));
+        ImageIcon icon2 = new ImageIcon(new ImageIcon("moneda500.jpg").getImage().getScaledInstance(200,200,Image.SCALE_DEFAULT));
+        ImageIcon icon3 = new ImageIcon(new ImageIcon("billete1000.jpg").getImage().getScaledInstance(200,100,Image.SCALE_DEFAULT));
+        ImageIcon icon4 = new ImageIcon(new ImageIcon("Moneda1500.jpg").getImage().getScaledInstance(200,200,Image.SCALE_DEFAULT));
 
         group = new ButtonGroup();
 

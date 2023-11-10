@@ -18,21 +18,12 @@ public class PanelComprador extends JPanel {
         pe = panexp;
         p = new PanelElegirProducto(pe);
 
-        JButton comprar = new JButton("comprar");
 
-        comprar.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-
-            }
-        });
-        this.setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
+        this.setLayout(new GridLayout(2, 1));
         this.setBackground(Color.green);
         this.add(p);
-        this.add(new JPanel());
+        //this.add(new JPanel());
         this.add(m);
-        this.add(comprar);
-        comprar.addActionListener(new ComprarListener());
         setVisible(true);
     }
     private class ComprarListener implements ActionListener{
