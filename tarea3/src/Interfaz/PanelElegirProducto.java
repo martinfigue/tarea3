@@ -49,7 +49,6 @@ public class PanelElegirProducto extends JPanel {
 
     }
     public String ProductoSeleccionado(){
-        System.out.println(cocacola.isSelected());
         if(cocacola.isSelected()){
             return "cocacola";
         }

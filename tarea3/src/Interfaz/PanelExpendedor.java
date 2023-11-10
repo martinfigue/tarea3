@@ -39,23 +39,18 @@ public class PanelExpendedor extends JPanel {
         this.revalidate();
         this.repaint();
         d.addMouseListener(new Listenerclick());
+        pv.addMouseListener(new Listenervuelto());
         monedasusadas=new Deposito<Moneda>();
-        //this.setMaximumSize(new Dimension(30,70));
     }
 
     public void setSizePanel(){
-        d.revalidate();
-        d.repaint();
-        this.revalidate();
-        this.repaint();
-        d.setPreferredSize(new Dimension((int) (this.getWidth()*0.8), (int) (0.8*this.getHeight())));
+
+        d.setPreferredSize(new Dimension((int) (this.getWidth()*0.7), (int) (0.7*this.getHeight())));
         d.fill();
         d.revalidate();
         d.repaint();
         this.revalidate();
         this.repaint();
-        System.out.println(this.getWidth());
-        System.out.println(this.getHeight());
     }
 
     public void comprarProducto(String producto){
@@ -117,27 +112,12 @@ public class PanelExpendedor extends JPanel {
         super.paint(g);
     }
 
-
-   /* public void mouseClicked(MouseEvent e) {
-    }
-    public void mousePressed(MouseEvent e) {
-        System.out.println("press");
-    }
-    public void mouseReleased(MouseEvent e) {
-    }
-    public void mouseEntered(MouseEvent e) {
-    }
-    public void mouseExited(MouseEvent e) {
-
-    }*/
-
-
     private class Listenerclick implements MouseListener {
         public void mouseClicked(MouseEvent e){
             d.refill();
             d.fill();
             d.revalidate();
-            System.out.println("hola");
+
         }
 
         public void mousePressed(MouseEvent e) {
@@ -159,7 +139,10 @@ public class PanelExpendedor extends JPanel {
 
     private class Listenervuelto implements MouseListener {
         public void mouseClicked(MouseEvent e){
-            
+            pv.getVuelto();
+            pv.dibujarMonedas();
+            pv.revalidate();
+            pv.repaint();
         }
 
         public void mousePressed(MouseEvent e) {

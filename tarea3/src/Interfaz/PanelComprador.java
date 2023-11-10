@@ -123,8 +123,11 @@ public class PanelComprador extends JPanel {
                 System.out.println("Número de serie de moneda:" + " " + moneda.getSerie());
             }
             try{
-                comprarProducto(tipoproducto,moneda);
-                pe.pv.dibujarMonedas();
+                if(pe.pp.estaLleno==0) {
+                    comprarProducto(tipoproducto, moneda);
+                    pe.pv.dibujarMonedas();
+                }
+
             }catch (PagoInsuficienteException ex){
                 ex.printStackTrace();
             }

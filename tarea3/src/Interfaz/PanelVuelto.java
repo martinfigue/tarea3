@@ -19,6 +19,7 @@ public class PanelVuelto extends JPanel {
     }
 
     public void dibujarMonedas(){
+        this.removeAll();
         int monedas= vuelto.getSize();
         while(monedas>0){
             Moneda m=vuelto.getElemento();
@@ -35,6 +36,13 @@ public class PanelVuelto extends JPanel {
             monedas--;
 
         }
+
+    }
+
+    public Moneda getVuelto(){
+        if(vuelto.getSize()>0){
+            return vuelto.getElemento();
+        } else return null;
 
     }
 }

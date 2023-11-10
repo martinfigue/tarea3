@@ -19,7 +19,6 @@ public class PanelProducto extends JPanel {
     private class Listenerclick implements MouseListener {
         public void mouseClicked(MouseEvent e){
             sacarProducto();
-            System.out.println("chao");
         }
 
         public void mousePressed(MouseEvent e) {
