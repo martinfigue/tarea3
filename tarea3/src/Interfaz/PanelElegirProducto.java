@@ -8,6 +8,11 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+/**
+ * Aca se crean los 5 botones de los productos del expendedor, teniendo seleccion unica
+ */
+
+
 public class PanelElegirProducto extends JPanel {
     private JToggleButton cocacola;
     private JToggleButton sprite;
@@ -17,6 +22,11 @@ public class PanelElegirProducto extends JPanel {
     private ButtonGroup grupo;
     private JButton comprar;
     private PanelExpendedor pe;
+
+    /**
+     * Se crean los botones juntos a sus imagenes, asi como tambien el boton comprar
+     * @param pe representa el panel expendedor
+     */
     public PanelElegirProducto(PanelExpendedor pe){
 
         this.pe=pe;
@@ -48,6 +58,11 @@ public class PanelElegirProducto extends JPanel {
 
 
     }
+
+    /**
+     * Aca se selecciona el producto a comprar
+     * @return el producto que se quiere comprar
+     */
     public String ProductoSeleccionado(){
         if(cocacola.isSelected()){
             return "cocacola";
