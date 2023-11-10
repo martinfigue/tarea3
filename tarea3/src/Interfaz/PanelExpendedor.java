@@ -1,6 +1,7 @@
 package Interfaz;
 import Código.Deposito;
 import Código.Expendedor;
+import Código.Moneda;
 import Código.NoHayProductoException;
 
 import java.awt.Color;
@@ -14,6 +15,9 @@ import javax.swing.*;
 public class PanelExpendedor extends JPanel {
     Expendedor exp;
     Depositos d;
+
+    public PanelVuelto pv;
+    public Deposito<Moneda> monedasusadas;
     PanelProducto pp;
     public PanelExpendedor(int x, int y){
         super();
@@ -22,13 +26,20 @@ public class PanelExpendedor extends JPanel {
         this.setPreferredSize(new Dimension(425,550));
         d = new Depositos(this.getPreferredSize());
         pp = new PanelProducto(this.d);
+        pv= new PanelVuelto();
         this.setLayout(springLayout);
         this.add(d);
         this.setBackground(Color.red);
         this.add(pp);
+        this.add(pv);
         springLayout.putConstraint(SpringLayout.SOUTH,pp,-10,SpringLayout.SOUTH,this);
         springLayout.putConstraint(SpringLayout.EAST,pp,-10,SpringLayout.EAST,this);
+        springLayout.putConstraint(SpringLayout.SOUTH,pv,-10,SpringLayout.SOUTH,this);
+        springLayout.putConstraint(SpringLayout.WEST,pv,10,SpringLayout.WEST,this);
+        this.revalidate();
+        this.repaint();
         d.addMouseListener(new Listenerclick());
+        monedasusadas=new Deposito<Moneda>();
         //this.setMaximumSize(new Dimension(30,70));
     }
 
@@ -145,4 +156,27 @@ public class PanelExpendedor extends JPanel {
 
         }
     }
+
+    private class Listenervuelto implements MouseListener {
+        public void mouseClicked(MouseEvent e){
+            
+        }
+
+        public void mousePressed(MouseEvent e) {
+
+        }
+
+        public void mouseReleased(MouseEvent e) {
+
+        }
+
+        public void mouseEntered(MouseEvent e) {
+
+        }
+
+        public void mouseExited(MouseEvent e) {
+
+        }
+    }
+
 }
