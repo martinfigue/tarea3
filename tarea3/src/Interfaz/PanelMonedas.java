@@ -6,6 +6,12 @@ import javax.swing.*;
 import java.awt.*;
 import java.io.File;
 
+/**
+ * Panel Monedas usado en el Panel Comprador
+ * Aca se crean los 4 botones de las monedas respectivas
+ *
+ */
+
 public class PanelMonedas extends JPanel {
     private JRadioButton moneda100;
     private JRadioButton moneda500;
@@ -13,6 +19,7 @@ public class PanelMonedas extends JPanel {
     private JRadioButton moneda1500;
 
     private int serie_count=0;
+
     ButtonGroup group;
 
     public PanelMonedas() {
@@ -71,6 +78,11 @@ public class PanelMonedas extends JPanel {
         }
         return radioButton;
     }
+
+    /**
+     * Aca se verifica la moneda seleccionada y devuelve el numero de serie de esta
+     * @return la serie de la moneda seleccionada
+     */
     public Moneda monedaSeleccionada(){
         serie_count++;
         if(moneda100.isSelected()){

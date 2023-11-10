@@ -3,6 +3,12 @@ package Interfaz;
 import javax.swing.*;
 import java.awt.*;
 
+/**
+ * Aqui es donde se muestra en pantalla los paneles comprador y expendedor
+ * siendo la parte izquierda de la ventana el expendedor
+ * siendo la parte derecha de la ventana el panel de compra
+ */
+
 public class Ventana extends JFrame {
     
     Ventana() {
