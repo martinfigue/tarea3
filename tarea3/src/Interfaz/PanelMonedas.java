@@ -12,6 +12,7 @@ public class PanelMonedas extends JPanel {
     private JRadioButton moneda1000;
     private JRadioButton moneda1500;
 
+    private int serie_count=0;
     ButtonGroup group;
 
     public PanelMonedas() {
@@ -71,18 +72,20 @@ public class PanelMonedas extends JPanel {
         return radioButton;
     }
     public Moneda monedaSeleccionada(){
+        serie_count++;
         if(moneda100.isSelected()){
-            return new Moneda100();
+            return new Moneda100(100+serie_count);
         }
         else if(moneda500.isSelected()){
-            return new Moneda500();
+            return new Moneda500(500+serie_count);
         }
         else if(moneda1000.isSelected()){
-            return new Moneda1000();
+            return new Moneda1000(1000+serie_count);
         }
         else if(moneda1500.isSelected()){
-            return new Moneda1500();
+            return new Moneda1500(1500+serie_count);
         }
+
         return null;
     }
 }
