@@ -72,16 +72,16 @@ public class PanelMonedas extends JPanel {
     }
     public Moneda monedaSeleccionada(){
         if(moneda100.isSelected()){
-            return getSerie();
+            return new Moneda100();
         }
         else if(moneda500.isSelected()){
-            return getSerie();
+            return new Moneda500();
         }
         else if(moneda1000.isSelected()){
-            return getSerie();
+            return new Moneda1000();
         }
         else if(moneda1500.isSelected()){
-            return getSerie();
+            return new Moneda1500();
         }
         return null;
     }

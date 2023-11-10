@@ -44,42 +44,31 @@ public class PanelElegirProducto extends JPanel {
         this.add(fanta);
         this.add(snickers);
         this.add(super8);
-        this.add(comprar);
-        comprar.addActionListener(new comprarListener());
+
+
 
     }
-    public int ProductoSeleccionado(){
+    public String ProductoSeleccionado(){
         System.out.println(cocacola.isSelected());
         if(cocacola.isSelected()){
-
-                pe.comprarProducto("cocacola");
-
-            return Producto.getSerie();
+            return "cocacola";
         }
         else if(sprite.isSelected()){
-            pe.comprarProducto("sprite");
-            return Producto.getSerie();
+            return "sprite";
         }
         else if(fanta.isSelected()){
-            pe.comprarProducto("fanta");
-            return Producto.getSerie();
+            return "fanta";
         }
         else if(snickers.isSelected()){
-            pe.comprarProducto("snickers");
-            return Producto.getSerie();
+            return "snickers";
         }
         else if(super8.isSelected()){
-            pe.comprarProducto("super8");
-            return Producto.getSerie();
+            return "super8";
         }
         else{
-            return -1;
+            return "";
         }
     }
 
-    private class comprarListener implements ActionListener {
-        public void actionPerformed(ActionEvent ae){
-            ProductoSeleccionado();
-        }
-    }
+
 }
